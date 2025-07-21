@@ -1,0 +1,10 @@
+nome = input("Digite o nome do produto: ")
+preco = input("Digite o preço do produto (ex: 19.99): ")
+descricao = input("Digite a descrição do produto: ")
+status = input("Digite o status do produto (Disponível/Indisponível): ")
+
+print("\n=== PRODUTO CADASTRADO ===")
+print("Nome:", nome)
+print("Preço: R$", preco)
+print("Descrição:", descricao)
+print("Status:", status)

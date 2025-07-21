@@ -1,0 +1,10 @@
+nome = input("Digite o nome do restaurante: ")
+cnpj = input("Digite o CNPJ do restaurante: ")
+telefone = input("Digite o telefone do restaurante: ")
+endereco = input("Digite o endereço do restaurante: ")
+
+print("\n=== DADOS DO RESTAURANTE ===")
+print("Nome:", nome)
+print("CNPJ:", cnpj)
+print("Telefone:", telefone)
+print("Endereço:", endereco)

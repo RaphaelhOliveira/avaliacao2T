@@ -1,0 +1,12 @@
+nome = input("Digite o nome do entregador: ")
+telefone = input("Digite o telefone do entregador: ")
+veiculo = input("Digite o tipo de veículo (ex: moto, bicicleta, carro): ")
+status = input("Digite o status (Ativo/Inativo): ")
+cpf = input("Digite o CPF do entregador: ")
+
+print("\n=== ENTREGADOR CADASTRADO ===")
+print("Nome:", nome)
+print("Telefone:", telefone)
+print("Veículo:", veiculo)
+print("Status:", status)
+print("CPF:", cpf)

@@ -1,0 +1,126 @@
+/* Reset e configurações básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #FFF5E6;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Estilos do cabeçalho */
+header {
+    background-color: #FF8C00;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #FFF5E6;
+    font-size: 1.2rem;
+}
+
+/* Estilos do conteúdo principal */
+main {
+    padding: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #FF6347;
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.menu-item {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+}
+
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.menu-item h2 {
+    padding: 15px 15px 5px;
+    color: #FF4500;
+}
+
+.menu-item p {
+    padding: 0 15px;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #FF8C00;
+    margin: 10px 0;
+}
+
+.order-btn {
+    display: block;
+    background-color: #FF6347;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    margin: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.order-btn:hover {
+    background-color: #FF4500;
+}
+
+/* Estilos do rodapé */
+footer {
+    background-color: #FF8C00;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .menu-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .logo {
+        font-size: 2rem;
+    }
+}

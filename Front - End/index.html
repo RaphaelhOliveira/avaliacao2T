@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Usuário</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.leonardo.ai/users/51ddf643-230d-4583-bdb3-bb4be1b19875/generations/40a5b9b9-61fe-4cee-95ea-3f5165c1264d/segments/1:4:1/Flux_Dev_A_vibrant_orangecolored_visual_representation_of_the__0.jpg">
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <div class="logo">WolfDeliver</div>
+            <p>Sistema de Cadastro</p>
+        </div>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
+    </header>
+
     <div class="container">
         <h1 class="titulo-principal">Cadastro</h1>
         
@@ -36,8 +48,12 @@
                 <input type="email" id="email" class="campo-entrada" placeholder="seu@email.com" required>
             </div>
             
-            <a href="inicial.html" class="botao-enviar">Cadastrar</a>
+            <a href="inicial.html" class="botao-enviar">
+                <span class="botao-texto">Cadastrar</span>
+                <span class="botao-icon">→</span>
+            </a>
         </form>
     </div>
+    <script src="index.js"></script>
 </body>
 </html>

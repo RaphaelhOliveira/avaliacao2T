@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WolfDeliver - Finalizar Pedido</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="item.css">
 </head>
 <body>
     <header>
-        <div class="logo">WolfDeliver</div>
-        <p>Finalize seu pedido com segurança</p>
+        <div class="header-content">
+            <div class="logo">WolfDeliver</div>
+            <p>Finalize seu pedido com segurança</p>
+        </div>
+        <button id="theme-toggle" class="theme-btn">
+            <i class="fas fa-moon"></i>
+        </button>
     </header>
     
     <main class="checkout-container">
@@ -25,19 +31,19 @@
                     <div class="item-price">R$ 29,90</div>
                 </div>
 
-            
-            <div class="order-totals">
-                <div class="subtotal">
-                    <span>Subtotal</span>
-                    <span>R$ 29,90</span>
-                </div>
-                <div class="delivery-fee">
-                    <span>Taxa de Entrega</span>
-                    <span>R$ 8,00</span>
-                </div>
-                <div class="total">
-                    <span>Total</span>
-                    <span>R$ 37,90</span>
+                <div class="order-totals">
+                    <div class="subtotal">
+                        <span>Subtotal</span>
+                        <span>R$ 29,90</span>
+                    </div>
+                    <div class="delivery-fee">
+                        <span>Taxa de Entrega</span>
+                        <span>R$ 8,00</span>
+                    </div>
+                    <div class="total">
+                        <span>Total</span>
+                        <span>R$ 37,90</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -147,12 +153,14 @@
                 </div>
             </div>
             
-            <a href="rastreador1.html" class="order-btn">Confimar Pedido</a>
+            <a href="rastreador1.html" class="order-btn">Confirmar Pedido</a>
         </section>
     </main>
     
     <footer>
         <p>© 2025 WolfDeliver - Todos os direitos reservados</p>
     </footer>
+
+    <script src="item.js"></script>
 </body>
 </html>

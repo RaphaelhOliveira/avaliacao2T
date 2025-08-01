@@ -1,38 +1,102 @@
-/* Reset e configurações básicas */
+:root {
+    --bg-color: #FFF5E6;
+    --text-color: #333;
+    --header-bg: #FF8C00;
+    --header-text: #FFF5E6;
+    --card-bg: white;
+    --card-text: #666;
+    --title-color: #FF6347;
+    --price-color: #FF8C00;
+    --btn-bg: #FF6347;
+    --btn-hover: #FF4500;
+    --footer-bg: #FF8C00;
+    --footer-text: white;
+    --shadow: 0 3px 10px rgba(0,0,0,0.1);
+    --border-color: #FFA07A;
+    --divider-color: #eee;
+    --progress-line: #FFA07A;
+    --progress-step: #FFA07A;
+    --progress-step-active: #FF4500;
+    --delivery-bg: #FFF5E6;
+}
+
+[data-theme="dark"] {
+    --bg-color: #1A1A1A;
+    --text-color: #E0E0E0;
+    --header-bg: #E65100;
+    --header-text: #FFE0B2;
+    --card-bg: #2D2D2D;
+    --card-text: #BDBDBD;
+    --title-color: #FF7043;
+    --price-color: #FFA726;
+    --btn-bg: #FF7043;
+    --btn-hover: #FF5722;
+    --footer-bg: #E65100;
+    --footer-text: #FFE0B2;
+    --shadow: 0 3px 10px rgba(0,0,0,0.3);
+    --border-color: #FF8A65;
+    --divider-color: #444;
+    --progress-line: #FF8A65;
+    --progress-step: #5C3D1E;
+    --progress-step-active: #FF5722;
+    --delivery-bg: #3D3D3D;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
 }
 
 body {
-    background-color: #FFF5E6;
-    color: #333;
+    background-color: var(--bg-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 
-/* Estilos do cabeçalho */
 header {
-    background-color: #FF8C00;
-    padding: 20px 0;
-    text-align: center;
+    background-color: var(--header-bg);
+    padding: 20px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content {
+    text-align: center;
+    flex-grow: 1;
 }
 
 .logo {
-    color: white;
+    color: var(--header-text);
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
 header p {
-    color: #FFF5E6;
+    color: var(--header-text);
     font-size: 1.2rem;
 }
 
-/* Layout principal */
+.theme-btn {
+    background: transparent;
+    border: none;
+    color: var(--header-text);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+.theme-btn:hover {
+    transform: rotate(30deg);
+}
+
 .container-rastreamento {
     max-width: 800px;
     margin: 30px auto;
@@ -40,21 +104,21 @@ header p {
 }
 
 .confirmacao-pedido {
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
     margin-bottom: 30px;
     text-align: center;
 }
 
 .mensagem-confirmacao h1 {
-    color: #FF4500;
+    color: var(--title-color);
     margin-bottom: 10px;
 }
 
 .mensagem-confirmacao p {
-    color: #666;
+    color: var(--card-text);
     font-size: 1.1rem;
 }
 
@@ -64,42 +128,41 @@ header p {
 }
 
 .detalhes-pedido h2 {
-    color: #FF6347;
+    color: var(--title-color);
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #FFA07A;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .linha-detalhe {
     display: flex;
     justify-content: space-between;
     padding: 12px 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid var(--divider-color);
 }
 
 .rotulo-detalhe {
     font-weight: bold;
-    color: #FF6347;
+    color: var(--title-color);
 }
 
 .valor-detalhe {
-    color: #333;
+    color: var(--text-color);
 }
 
-/* Progresso do pedido */
 .progresso-entrega {
-    background-color: white;
+    background-color: var(--card-bg);
     border-radius: 10px;
     padding: 25px;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow);
     margin-bottom: 30px;
 }
 
 .progresso-entrega h2 {
-    color: #FF6347;
+    color: var(--title-color);
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 1px solid #FFA07A;
+    border-bottom: 1px solid var(--border-color);
 }
 
 .passos-progresso {
@@ -115,7 +178,7 @@ header p {
     top: 0;
     bottom: 0;
     width: 2px;
-    background-color: #FFA07A;
+    background-color: var(--progress-line);
 }
 
 .passo {
@@ -131,7 +194,7 @@ header p {
 .icone-passo {
     width: 32px;
     height: 32px;
-    background-color: #FFA07A;
+    background-color: var(--progress-step);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -143,7 +206,7 @@ header p {
 }
 
 .passo.ativo .icone-passo {
-    background-color: #FF4500;
+    background-color: var(--progress-step-active);
 }
 
 .info-passo {
@@ -151,29 +214,32 @@ header p {
 }
 
 .info-passo h3 {
-    color: #FF4500;
+    color: var(--title-color);
     margin-bottom: 5px;
 }
 
 .hora-passo {
-    color: #666;
+    color: var(--card-text);
     font-size: 0.9rem;
 }
 
-/* Informações do entregador */
 .info-entregador {
     margin-top: 40px;
 }
 
 .info-entregador h3 {
-    color: #FF6347;
+    color: var(--title-color);
     margin-bottom: 15px;
+}
+
+.info-entregador img {
+    width: 150px;
 }
 
 .detalhes-entregador {
     display: flex;
     align-items: center;
-    background-color: #FFF5E6;
+    background-color: var(--delivery-bg);
     padding: 15px;
     border-radius: 8px;
 }
@@ -191,63 +257,17 @@ header p {
 }
 
 .contato-entregador strong {
-    color: #FF6347;
+    color: var(--title-color);
 }
 
-/* Botões de ação */
-.acoes-pedido {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
-    margin-bottom: 30px;
-}
-
-.botao-acao {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 15px;
-    border: none;
-    border-radius: 8px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.botao-acao img {
-    margin-right: 10px;
-}
-
-.botao-whatsapp {
-    background-color: #25D366;
-    color: white;
-}
-
-.botao-ligar {
-    background-color: #FF8C00;
-    color: white;
-}
-
-.botao-ajuda {
-    background-color: #FF6347;
-    color: white;
-}
-
-.botao-acao:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
-/* Estilos do rodapé */
 footer {
-    background-color: #FF8C00;
-    color: white;
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
     text-align: center;
     padding: 20px;
     margin-top: 40px;
 }
 
-/* Responsividade */
 @media (max-width: 768px) {
     .container-rastreamento {
         padding: 0 15px;
@@ -255,10 +275,6 @@ footer {
     
     .logo {
         font-size: 2rem;
-    }
-    
-    .acoes-pedido {
-        grid-template-columns: 1fr;
     }
     
     .detalhes-entregador {
